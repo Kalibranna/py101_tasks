@@ -13,6 +13,15 @@
 
 Тебе может понадобится модуль random, цикл while и ветвления
 """
-
-if __name__ == '__main__':
-    pass
+import random
+number_question = random.randint(1, 1000000)
+number = None
+while True:
+    number = int(input("Введите число: "))
+    if number_question == number:
+        print("Победа")
+        
+    elif number_question < number:
+        print("введите число меньше")
+    elif number_question > number:
+        print("введите число больше")   
