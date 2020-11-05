@@ -7,6 +7,20 @@
 
 Тебе может понадобиться цикл for и ветвления
 """
-
-if __name__ == '__main__':
-    pass
+number=0
+for number in range(1, 15 + 1):
+    if number%3 == 0  and number%15 != 0:
+        print ("zip")
+        number+=1
+        continue
+    if number%5 == 0 and number%15 != 0:
+        print ("zap")
+        number+=1
+        continue
+    if number%15 == 0 and number%3 == 0 and number%5 == 0:
+        print ("zip-zap")
+        number+=1
+        continue
+    else:
+         print (number)
+         number+=1
