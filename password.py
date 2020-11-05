@@ -5,6 +5,11 @@
 Сложным считается пароль, состоящий как минимум из 8-ми символов,
 включая цифры и алфавитные символы
 """
+print("введите пароль")
+import re
+password = input()
 
-if __name__ == '__main__':
-    pass
+if len(password) >= 8  and  password.isalnum() and not password.isalpha() and not password.isnumeric():
+    print('сложный')
+else:
+    print('простой')
