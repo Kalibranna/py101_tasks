@@ -10,3 +10,18 @@
 
 if __name__ == '__main__':
     pass
+
+
+import sys
+import argparse 
+import nltk
+import collections
+nltk.download('stopwords')
+from nltk.corpus import stopwords
+import os
+
+text_dok = input("Введите путь к файлу: ")
+if os.path.exists(text_dok):
+    print("Указанный файл существует") 
+else:
+    print("Файл не существует") 
