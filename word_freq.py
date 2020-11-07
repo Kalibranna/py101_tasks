@@ -25,3 +25,25 @@ if os.path.exists(text_dok):
     print("Указанный файл существует") 
 else:
     print("Файл не существует") 
+ 
+#открыли файл
+document_text = open(check_file, 'r')
+text_string = document_text.read()
+text_string = document_text.read().lower()
+#нашли стоп-слова
+en_stops = set(stopwords.words('english'))
+
+#отфильтровали
+filtered_words = [word for word in text_string if word not in stopwords.words('english')]
+
+frequency = {}
+#посчитали
+for word in filtered_words: 
+    count = frequency.get(word,0)
+    frequency[word] = count + 1
+     
+frequency_list = frequency.keys()
+ 
+for words in frequency_list:
+    print (words, frequency[words])
+  
